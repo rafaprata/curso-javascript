@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type='number' name='txtn1' id='txtn1'> 
+    <input type="text" name="operator" id="operator">
+    <input type="number" name="txtn2" id="txtn2">
+    <div id='mostrador'>Mostrador</div>
+    <input type="button" value="=" onclick="identificar()">
+    <input type="button" value="Clear" id="entrada">
+
+    <script>
+
+        // Variáveis
+        var number_input1 = window.document.getElementById('txtn1')
+        var operator = window.document.getElementById('operator')
+        var number_input2 = window.document.getElementById('txtn2')
+        var clear_calc = window.document.getElementById('clr_calc')
+        var show = window.document.getElementById('mostrador')
+        
+        
+
+        //Funções
+        function somar(){
+            var n1 = Number(number_input1.value)
+            var n2 =  Number(number_input2.value)
+            var s = n1 + n2
+            show.innerHTML = `${n1} + ${n2} = ${s}`
+        }
+        function subtrair(){
+            var n1 = Number(number_input1.value)
+            var n2 =  Number(number_input2.value)
+            var s = n1 - n2
+            show.innerHTML = `${n1} - ${n2} = ${s}`
+        }
+        function multiplicar(){
+            var n1 = Number(number_input1.value)
+            var n2 =  Number(number_input2.value)
+            var s = n1*n2
+            show.innerHTML = `${n1} x ${n2} = ${s}`
+        }
+        function dividir(){
+            var n1 = Number(number_input1.value)
+            var n2 =  Number(number_input2.value)
+            var s = n1/n2
+            show.innerHTML = `${n1} : ${n2} = ${s}`
+        }
+
+        //Casos
+        function identificar(){
+            var op = String(operator.value)
+
+            if (op == "+"){
+                somar()
+            } else if (op == "-"){
+                subtrair()
+            } else if (op == "*"){
+                multiplicar()
+            } else if (op == "/"){
+                dividir()
+            }
+            else {
+                show.innerHTML = `A operação que você indicou não existe`
+            }
+        }       
+
+    </script>
+</body>
+</html>

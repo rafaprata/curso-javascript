@@ -12,7 +12,7 @@
     <input type="number" name="txtn2" id="txtn2">
     <div id='mostrador'>Mostrador</div>
     <input type="button" value="=" onclick="identificar()">
-    <input type="button" value="Clear" id="entrada">
+    <input type="button" value="Clear" onclick="limpar()">
 
     <script>
 
@@ -67,7 +67,12 @@
             else {
                 show.innerHTML = `A operação que você indicou não existe`
             }
-        }       
+        }
+        
+        //Clear
+        function limpar(){
+            show.innerHTML = "Mostrador"
+        }
 
     </script>
 </body>

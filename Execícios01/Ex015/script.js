@@ -10,15 +10,15 @@ function verificar(){
         var fsex = document.getElementsByName('radsex')
         var idade = ano - txtanoNasc.value
         var genero = ' '
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        var img = document.createElement('img') //Criar elemento dinamicamente a partir de JS.
+        img.setAttribute('id', 'foto') //Definir atributo no elemento criado, a partir de JS
         var age = ''
 
         if(fsex[0].checked){
             genero = 'Masculino'
             if(idade >= 0 && idade < 12){
                 age = 'Menino'
-                //img.setAttribute('src', 'COLOCAR O CAMNHO DA IMAGEM')
+                //img.setAttribute('src', 'COLOCAR O CAMNHO DA IMAGEM') 
 
             } else if(idade >= 12 && idade < 18){
                 age = 'Homem Jovem'

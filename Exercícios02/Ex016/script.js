@@ -15,4 +15,7 @@ function contar(){
         pas = 1
     }
     
+    for(ini; ini <= fim; ini = ini+pas){
+        window.alert(`${ini}`)
+    }
 }

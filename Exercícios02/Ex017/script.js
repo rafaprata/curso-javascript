@@ -16,7 +16,7 @@ function tabuada(){
 
             item.text= `${n} x ${c} = ${r}`
 
-            tab.appendChild(item)                                  //Adiciona o item criado dentro do select no html
+            tab.appendChild(item)                                  //Adiciona o item criado dentro do select no html 
         }
     }
     

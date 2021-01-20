@@ -23,7 +23,7 @@ function contar(){
     //Repetição
     if(ini < fim){ 
         for(var c = ini; c <= fim; c += pas){ //Caso o valor inicial seja menor que o final
-            res.innerHTML += `${c} -> `
+            res.innerHTML += `${c} -> `       //O comando += ele sempre adiciona o valor na variável.
         }
       
     }else {

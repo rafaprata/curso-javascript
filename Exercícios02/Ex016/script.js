@@ -11,21 +11,25 @@ function contar(){
 
     //Condições
     if(ini == 0 || fim == 0){
+        res.innerHTML = `Impossível contar`
         window.alert(`[ERRO] Não é possível contar sem um valor inicial ou final!`)
     }
     if(pas == 0){
         window.alert(`Considerando passo de 1`)
         pas = 1
     }
+    res.innerHTML = "Contando: "
     
     //Repetição
-    if(ini < fim){
-        for(ini; ini <= fim; ini = ini+pas){
-            window.alert(`${ini}`)
+    if(ini < fim){ 
+        for(var c = ini; c <= fim; c += pas){ //Caso o valor inicial seja menor que o final
+            res.innerHTML += `${c} -> `
         }
-    }else if(ini > fim){
-        for(ini; fim <= ini; ini = ini-pas){
-            window.alert(`${ini}`)
+      
+    }else {
+        for(var c = ini; c <= ini; c -= pas){ //Caso o Valor Final seja menor que o inicial
+            res.innerHTML += `${c} -> `
         }
     }
+    res.innerHTML += `FIM`
 }

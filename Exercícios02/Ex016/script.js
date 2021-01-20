@@ -1,4 +1,6 @@
 function contar(){
+
+    //Variáveis
     var txtini = window.document.getElementById("txtini")
     var txtfim = window.document.getElementById("txtfim")
     var txtpas = window.document.getElementById("txtpas")
@@ -7,6 +9,7 @@ function contar(){
     var pas = Number(txtpas.value)
     var res = window.document.getElementById("res")
 
+    //Condições
     if(ini == 0 || fim == 0){
         window.alert(`[ERRO] Não é possível contar sem um valor inicial ou final!`)
     }
@@ -15,7 +18,14 @@ function contar(){
         pas = 1
     }
     
-    for(ini; ini <= fim; ini = ini+pas){
-        window.alert(`${ini}`)
+    //Repetição
+    if(ini < fim){
+        for(ini; ini <= fim; ini = ini+pas){
+            window.alert(`${ini}`)
+        }
+    }else if(ini > fim){
+        for(ini; fim <= ini; ini = ini-pas){
+            window.alert(`${ini}`)
+        }
     }
 }

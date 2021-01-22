@@ -19,7 +19,6 @@ function adicionar(){
             item.text = `Número ${list[pos]} adicionado`  
             
             tab.appendChild(item)
-            txtnum.innerHTML = ' '
         }
     }
 }
@@ -29,6 +28,38 @@ function numrep(n){
         return 0
     } else{
         return 1
-    }
-    
+    }    
 }
+
+//Analizar os números
+
+function analisar(){
+
+    
+
+}
+
+//Total de Números cadastrados
+function totalcad(n){
+    return n.length()
+}
+//O maior valor
+function maiorn(n){
+    return n[totalcad(n)-1]
+}
+
+//O menor valor
+function menorn(n){
+    return n[0]
+}
+
+//A soma dos valores
+function soma(n){
+    let vlrsoma = 0
+    for(let c in n){
+        vlrsoma += n[c]
+    }
+    return vlrsoma
+}
+
+//A média dos valores

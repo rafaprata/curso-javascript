@@ -34,32 +34,25 @@ function numrep(n){
 //Analizar os números
 
 function analisar(){
-
-    
+    if(list == 0){
+        window.alert(`[ERRO] Adicione algum número para poder analisar.`)
+    }else{
+        list.sort()
+        alert(`A sua lista de números é ${list}`)
+    }
 
 }
 
 //Total de Números cadastrados
-function totalcad(n){
-    return n.length()
-}
+
+
 //O maior valor
-function maiorn(n){
-    return n[totalcad(n)-1]
-}
+
 
 //O menor valor
-function menorn(n){
-    return n[0]
-}
+
 
 //A soma dos valores
-function soma(n){
-    let vlrsoma = 0
-    for(let c in n){
-        vlrsoma += n[c]
-    }
-    return vlrsoma
-}
+
 
 //A média dos valores

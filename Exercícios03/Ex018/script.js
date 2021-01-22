@@ -40,6 +40,8 @@ function analisar(){
         list.sort((a,b)=>a-b)                       //Para cada a, b em lista retornará a-b
         
         alert(`A lista tem ${ftot(list)} números.`)
+        alert(`O maior valor é ${fmaior(list)}`)
+        alert(`O menor valor é ${fmenor(list)}`)
     }
 
 }
@@ -50,10 +52,14 @@ function ftot(n){
 }
 
 //O maior valor
-
+function fmaior(n){
+    return n[ftot(n)-1]
+}
 
 //O menor valor
-
+function fmenor(n){
+    return n[0]
+}
 
 //A soma dos valores
 

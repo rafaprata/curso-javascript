@@ -42,6 +42,7 @@ function analisar(){
         alert(`A lista tem ${ftot(list)} números.`)
         alert(`O maior valor é ${fmaior(list)}`)
         alert(`O menor valor é ${fmenor(list)}`)
+        alert(`Somando todos os valores temos, ${fsoma(list)}`)
     }
 
 }
@@ -62,6 +63,12 @@ function fmenor(n){
 }
 
 //A soma dos valores
-
+function fsoma(n){
+    var soma = 0
+    for (let i=0; i< ftot(n); i++){
+        soma += n[i]
+    }
+    return soma
+}
 
 //A média dos valores

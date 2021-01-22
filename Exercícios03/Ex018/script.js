@@ -43,6 +43,7 @@ function analisar(){
         alert(`O maior valor é ${fmaior(list)}`)
         alert(`O menor valor é ${fmenor(list)}`)
         alert(`Somando todos os valores temos, ${fsoma(list)}`)
+        alert(`A média dos valores digitados é ${fmedia(list)}`)
     }
 
 }
@@ -72,3 +73,7 @@ function fsoma(n){
 }
 
 //A média dos valores
+function fmedia(n){
+    var media = fsoma(n)/ftot(n)
+    return media
+}

@@ -37,14 +37,17 @@ function analisar(){
     if(list == 0){
         window.alert(`[ERRO] Adicione algum número para poder analisar.`)
     }else{
-        list.sort()
-        alert(`A sua lista de números é ${list}`)
+        list.sort((a,b)=>a-b)                       //Para cada a, b em lista retornará a-b
+        
+        alert(`A lista tem ${ftot(list)} números.`)
     }
 
 }
 
 //Total de Números cadastrados
-
+function ftot(n){
+    return n.length
+}
 
 //O maior valor
 
